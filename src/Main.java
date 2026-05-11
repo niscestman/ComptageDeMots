@@ -8,6 +8,15 @@ public class Main {
         File fichier = new File("test.txt");
         int totalMots = 0;
 
+        try {
+            // Utilisation du File Scanner pour lire le fichier
+            Scanner lecteur = new Scanner(fichier);
 
+
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Erreur : Le fichier est introuvable. Vérifiez l'emplacement.");
+        }
     }
 }
