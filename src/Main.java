@@ -12,8 +12,22 @@ public class Main {
             // Utilisation du File Scanner pour lire le fichier
             Scanner lecteur = new Scanner(fichier);
 
+            // Boucle qui lit chaque ligne du fichier
+            while (lecteur.hasNextLine()) {
+                String ligne = lecteur.nextLine();
 
+                // Séparation de la ligne en utilisant l'espace comme délimiteur
+                // On utilise trim() pour enlever les espaces inutiles au début/fin
+                if (!ligne.trim().isEmpty()) {
+                    String[] mots = ligne.trim().split("\\s+");
 
+                    // Addition du nombre de mots de la ligne au total
+                    totalMots += mots.length;
+                }
+            }
+            lecteur.close();
+
+            
 
         } catch (FileNotFoundException e) {
             System.out.println("Erreur : Le fichier est introuvable. Vérifiez l'emplacement.");
