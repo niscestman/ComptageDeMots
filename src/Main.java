@@ -27,7 +27,8 @@ public class Main {
             }
             lecteur.close();
 
-            
+            // Affichage du résultat final
+            System.out.println("Le fichier contient un total de : " + totalMots + " mots.");
 
         } catch (FileNotFoundException e) {
             System.out.println("Erreur : Le fichier est introuvable. Vérifiez l'emplacement.");
